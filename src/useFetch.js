@@ -25,11 +25,11 @@ const useFetch = (url) => {
                 setPending(false);
                 setError(err.message);
             }
+          
         })
-    }, 1000);
-
+    }, 1000)
         return () => abortCont.abort();
-    
+
       }, [url]);
     return {data, error, isPending};
 }
